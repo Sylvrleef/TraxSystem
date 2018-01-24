@@ -6,6 +6,8 @@ DROP DATABASE IF EXISTS project2;
 
 CREATE DATABASE project2;
 
+USE DATABASE project2;
+
 /*
 PR Request Section
 */
@@ -24,7 +26,7 @@ CREATE TABLE PR_Request (
     Comments varchar(600),
     Create_Date date not null,
     Vendor varchar(100) not null,
-    Status varchar(50) not null,
+    StatusQ varchar(50) not null,
     Complete_Date date,
     Created_By varchar(100) not null
 );
@@ -34,17 +36,16 @@ INSERT INTO PR_Request (
 	Item, 
 	Quantity, 
 	Unit_of_Measure, 
-	Item_Price,
-	Item_Total, 
+	Est_Amount,
+	Total_Amount, 
 	Tax_Rate, 
 	Estimated_Shipping,
-	Sub_Total,
-	Grand_Total,
-	Date_Needed, 
-	Justification, 
+	Date_Needed,
+	Justification,
 	Comments, 
+	Create_Date, 
 	Vendor, 
-	Status, 
+	StatusQ, 
 	Complete_Date, 
 	Created_By
 	)
@@ -58,11 +59,6 @@ VALUES (
 	150.90, 
 	8.25, 
 	30.00,
-	/*
-	what is the purpose of 163.35?
-	*/
-	163.35,
-	163.35,
 	20180203, 
 	'Justification of item', 
 	'Comments about item',
@@ -70,7 +66,7 @@ VALUES (
 	'Apple', 
 	'approved', 
 	20170815,
-	'Sade Browne',
+	'Sade Browne'
 	);
 
 INSERT INTO PR_Request (
@@ -78,17 +74,16 @@ INSERT INTO PR_Request (
 	Item, 
 	Quantity, 
 	Unit_of_Measure, 
-	Item_Price,
-	Item_Total, 
+	Est_Amount,
+	Total_Amount, 
 	Tax_Rate, 
 	Estimated_Shipping,
-	Sub_Total,
-	Grand_Total,
-	Date_Needed, 
-	Justification, 
+	Date_Needed,
+	Justification,
 	Comments, 
+	Create_Date, 
 	Vendor, 
-	Status, 
+	StatusQ, 
 	Complete_Date, 
 	Created_By
 	)
@@ -102,8 +97,6 @@ VALUES (
 	123.33, 
 	8.25, 
 	30.00,
-	163.35,
-	163.35,
 	20180203, 
 	'Justification of item', 
 	'Comments about item',
@@ -111,7 +104,7 @@ VALUES (
 	'Verizon', 
 	'approved',
 	20170815, 
-	'Sade Browne',
+	'Sade Browne'
 	);
 
 INSERT INTO PR_Request (
@@ -119,17 +112,16 @@ INSERT INTO PR_Request (
 	Item, 
 	Quantity, 
 	Unit_of_Measure, 
-	Item_Price,
-	Item_Total, 
+	Est_Amount,
+	Total_Amount, 
 	Tax_Rate, 
 	Estimated_Shipping,
-	Sub_Total,
-	Grand_Total,
-	Date_Needed, 
-	Justification, 
+	Date_Needed,
+	Justification,
 	Comments, 
+	Create_Date, 
 	Vendor, 
-	Status, 
+	StatusQ, 
 	Complete_Date, 
 	Created_By
 	)
@@ -143,12 +135,6 @@ VALUES (
 	1111.45, 
 	8.25, 
 	30.00,
-	163.35,
-	163.35,
-	/*
-	why is the number below the same as the one
-	for value 2 in the spreadsheet?
-	*/
 	20180203, 
 	'Justification of item', 
 	'Comments about item',
@@ -156,7 +142,7 @@ VALUES (
 	'Ford', 
 	'approved',
 	20170813, 
-	'Jason Saenz',
+	'Jason Saenz'
 	);
 
 INSERT INTO PR_Request (
@@ -164,17 +150,16 @@ INSERT INTO PR_Request (
 	Item, 
 	Quantity, 
 	Unit_of_Measure, 
-	Item_Price,
-	Item_Total, 
+	Est_Amount,
+	Total_Amount, 
 	Tax_Rate, 
 	Estimated_Shipping,
-	Sub_Total,
-	Grand_Total,
-	Date_Needed, 
-	Justification, 
+	Date_Needed,
+	Justification,
 	Comments, 
+	Create_Date, 
 	Vendor, 
-	Status, 
+	StatusQ, 
 	Complete_Date, 
 	Created_By
 	)
@@ -188,8 +173,6 @@ VALUES (
 	876.23, 
 	8.25, 
 	30.00,
-	163.35,
-	163.35,
 	20180103, 
 	'Justification of item', 
 	'Comments about item',
@@ -197,7 +180,7 @@ VALUES (
 	'Microsoft', 
 	'pending',
 	'no date until approved', 
-	'Jenny Usrey-Scott',
+	'Jenny Usrey-Scott'
 	);
 
 INSERT INTO PR_Request (
@@ -205,17 +188,16 @@ INSERT INTO PR_Request (
 	Item, 
 	Quantity, 
 	Unit_of_Measure, 
-	Item_Price,
-	Item_Total, 
+	Est_Amount,
+	Total_Amount, 
 	Tax_Rate, 
 	Estimated_Shipping,
-	Sub_Total,
-	Grand_Total,
-	Date_Needed, 
-	Justification, 
+	Date_Needed,
+	Justification,
 	Comments, 
+	Create_Date, 
 	Vendor, 
-	Status, 
+	StatusQ, 
 	Complete_Date, 
 	Created_By
 	)
@@ -229,8 +211,6 @@ VALUES (
 	365.09, 
 	8.25, 
 	30.00,
-	163.35,
-	163.35,
 	20180218, 
 	'Justification of item', 
 	'Comments about item',
@@ -238,7 +218,7 @@ VALUES (
 	'Shell', 
 	'pending',
 	'no date until approved', 
-	'Jenny Usrey-Scott',
+	'Jenny Usrey-Scott'
 	);
 
 INSERT INTO PR_Request (
@@ -246,17 +226,16 @@ INSERT INTO PR_Request (
 	Item, 
 	Quantity, 
 	Unit_of_Measure, 
-	Item_Price,
-	Item_Total, 
+	Est_Amount,
+	Total_Amount, 
 	Tax_Rate, 
 	Estimated_Shipping,
-	Sub_Total,
-	Grand_Total,
-	Date_Needed, 
-	Justification, 
+	Date_Needed,
+	Justification,
 	Comments, 
+	Create_Date, 
 	Vendor, 
-	Status, 
+	StatusQ, 
 	Complete_Date, 
 	Created_By
 	)
@@ -270,8 +249,6 @@ VALUES (
 	124.44, 
 	8.25, 
 	30.00,
-	163.35,
-	163.35,
 	20180222, 
 	'Justification of item', 
 	'Comments about item',
@@ -279,7 +256,7 @@ VALUES (
 	'Samsung', 
 	'approved',
 	20171125, 
-	'Anita Rodgerson',
+	'Anita Rodgerson'
 	);
 
 INSERT INTO PR_Request (
@@ -287,17 +264,16 @@ INSERT INTO PR_Request (
 	Item, 
 	Quantity, 
 	Unit_of_Measure, 
-	Item_Price,
-	Item_Total, 
+	Est_Amount,
+	Total_Amount, 
 	Tax_Rate, 
 	Estimated_Shipping,
-	Sub_Total,
-	Grand_Total,
-	Date_Needed, 
-	Justification, 
+	Date_Needed,
+	Justification,
 	Comments, 
+	Create_Date, 
 	Vendor, 
-	Status, 
+	StatusQ, 
 	Complete_Date, 
 	Created_By
 	)
@@ -311,8 +287,6 @@ VALUES (
 	346, 
 	8.25, 
 	30.00,
-	163.35,
-	163.35,
 	20180230, 
 	'Justification of item', 
 	'Comments about item',
@@ -320,7 +294,7 @@ VALUES (
 	'Ford', 
 	'approved',
 	20171210, 
-	'Anita Rodgerson',
+	'Anita Rodgerson'
 	);
 
 INSERT INTO PR_Request (
@@ -328,17 +302,16 @@ INSERT INTO PR_Request (
 	Item, 
 	Quantity, 
 	Unit_of_Measure, 
-	Item_Price,
-	Item_Total, 
+	Est_Amount,
+	Total_Amount, 
 	Tax_Rate, 
 	Estimated_Shipping,
-	Sub_Total,
-	Grand_Total,
-	Date_Needed, 
-	Justification, 
+	Date_Needed,
+	Justification,
 	Comments, 
+	Create_Date, 
 	Vendor, 
-	Status, 
+	StatusQ, 
 	Complete_Date, 
 	Created_By
 	)
@@ -356,8 +329,6 @@ VALUES (
 	23330, 
 	8.25, 
 	30.00,
-	163.35,
-	163.35,
 	20180203, 
 	'Justification of item', 
 	'Comments about item',
@@ -365,7 +336,7 @@ VALUES (
 	'Ford', 
 	'approved',
 	20171112, 
-	'Jason Saenz',
+	'Jason Saenz'
 	);
 
 INSERT INTO PR_Request (
@@ -373,17 +344,16 @@ INSERT INTO PR_Request (
 	Item, 
 	Quantity, 
 	Unit_of_Measure, 
-	Item_Price,
-	Item_Total, 
+	Est_Amount,
+	Total_Amount, 
 	Tax_Rate, 
 	Estimated_Shipping,
-	Sub_Total,
-	Grand_Total,
-	Date_Needed, 
-	Justification, 
+	Date_Needed,
+	Justification,
 	Comments, 
+	Create_Date, 
 	Vendor, 
-	Status, 
+	StatusQ, 
 	Complete_Date, 
 	Created_By
 	)
@@ -397,8 +367,6 @@ VALUES (
 	200, 
 	8.25, 
 	30.00,
-	163.35,
-	163.35,
 	20180203, 
 	'Justification of item', 
 	'Comments about item',
@@ -406,7 +374,7 @@ VALUES (
 	'Chevron', 
 	'approved',
 	'no date until approved', 
-	'Henry Dillard',
+	'Henry Dillard'
 	);
 
 INSERT INTO PR_Request (
@@ -414,17 +382,16 @@ INSERT INTO PR_Request (
 	Item, 
 	Quantity, 
 	Unit_of_Measure, 
-	Item_Price,
-	Item_Total, 
+	Est_Amount,
+	Total_Amount, 
 	Tax_Rate, 
 	Estimated_Shipping,
-	Sub_Total,
-	Grand_Total,
-	Date_Needed, 
-	Justification, 
+	Date_Needed,
+	Justification,
 	Comments, 
+	Create_Date, 
 	Vendor, 
-	Status, 
+	StatusQ, 
 	Complete_Date, 
 	Created_By
 	)
@@ -438,8 +405,6 @@ VALUES (
 	90.98, 
 	8.25, 
 	30.00,
-	163.35,
-	163.35,
 	20180214, 
 	'Justification of item', 
 	'Comments about item',
@@ -447,7 +412,7 @@ VALUES (
 	'Dell', 
 	'approved',
 	20171013, 
-	'Sade Brown',
+	'Sade Brown'
 	);
 
 INSERT INTO PR_Request (
@@ -455,17 +420,16 @@ INSERT INTO PR_Request (
 	Item, 
 	Quantity, 
 	Unit_of_Measure, 
-	Item_Price,
-	Item_Total, 
+	Est_Amount,
+	Total_Amount, 
 	Tax_Rate, 
 	Estimated_Shipping,
-	Sub_Total,
-	Grand_Total,
-	Date_Needed, 
-	Justification, 
+	Date_Needed,
+	Justification,
 	Comments, 
+	Create_Date, 
 	Vendor, 
-	Status, 
+	StatusQ, 
 	Complete_Date, 
 	Created_By
 	)
@@ -479,8 +443,6 @@ VALUES (
 	230.91, 
 	8.25, 
 	30.00,
-	163.35,
-	163.35,
 	20170730, 
 	'Justification of item', 
 	'Comments about item',
@@ -488,7 +450,7 @@ VALUES (
 	'Amazon', 
 	'approved',
 	20170810, 
-	'Henry Dillard',
+	'Henry Dillard'
 	);
 
 INSERT INTO PR_Request (
@@ -496,17 +458,16 @@ INSERT INTO PR_Request (
 	Item, 
 	Quantity, 
 	Unit_of_Measure, 
-	Item_Price,
-	Item_Total, 
+	Est_Amount,
+	Total_Amount, 
 	Tax_Rate, 
 	Estimated_Shipping,
-	Sub_Total,
-	Grand_Total,
-	Date_Needed, 
-	Justification, 
+	Date_Needed,
+	Justification,
 	Comments, 
+	Create_Date, 
 	Vendor, 
-	Status, 
+	StatusQ, 
 	Complete_Date, 
 	Created_By
 	)
@@ -520,8 +481,6 @@ VALUES (
 	765.41, 
 	8.25, 
 	30.00,
-	163.35,
-	163.35,
 	20180203, 
 	'Justification of item', 
 	'Comments about item',
@@ -529,7 +488,7 @@ VALUES (
 	'Apple', 
 	'approved',
 	20170917, 
-	'Anita Rodgerson',
+	'Anita Rodgerson'
 	);
 
 
